@@ -1,145 +1,248 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="Assets/style.css">
 
-        
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>	
+
+        <script type="module" src="./maps.js"></script>
 		
     </head>
     <body>
+        <!-- Navigation Bar -->
         <nav class="navbar">
-            <img src="Assets/Logos/Logo-Blue.svg">
-            <p><img src="Assets/Icons/Nav Icons/Home.svg" class="nav-icon">Home</p>
-            <p><img src="Assets/Icons/Nav Icons/Record.svg" class="nav-icon">Records</p>
-            <p><img src="Assets/Icons/Nav Icons/Music Note.svg" class="nav-icon">Music</p>
-            <p><img src="Assets/Icons/Nav Icons/People.svg" class="nav-icon">Artists</p>
-            <p><img src="Assets/Icons/Nav Icons/Calendar.svg" class="nav-icon">Concerts</p>
-            <button class="info-button">Sign Up</button>
-        </nav>
-        <header>
+            <div class="mobile-nav">
+                <img src="Assets/Logos/Logo-Blue.svg" class="logo" alt="Synder Recordings">
+                <button type="button" class="mobile-nav-btn" hidden onclick="toggleNav()"></button>
+            </div>
             
+            <div class="nav-items">
+                <a href="#"><img src="Assets/Icons/Nav Icons/Home.svg" class="nav-icon">Home</a>
+                <a href="#"><img src="Assets/Icons/Nav Icons/Record.svg" class="nav-icon">Records</a>
+                <a href="#"><img src="Assets/Icons/Nav Icons/Music Note.svg" class="nav-icon">Music</a>
+                <a href="#"><img src="Assets/Icons/Nav Icons/People.svg" class="nav-icon">Artists</a>
+                <a href="#"><img src="Assets/Icons/Nav Icons/Calendar.svg" class="nav-icon">Concerts</a>
+                <button class="info-button">
+                    Sign Up
+                </button>
+            </div>
+   
+        </nav>
+
+        <!-- Page Header -->
+        <header id="hero-header">
+            <div class="hero-content">
+                <h1>A.M. Paradox</h1>
+                <p class="body-lg">Christopher Brent Wood, better known by his stage name Brent Faiyaz, is
+                    an American singer and record producer. He released his debut project, an extended play entitled A.M. Paradox, in 2016.</p>
+                <div class="watch-video">
+                    <button type="button" class="round-button">
+                        <img src="Assets/Icons/Basic Icons/Play button triangle.svg" alt="Play Video">
+                        <div class="side-wipe-fill">
+                            <div></div>
+                        </div>
+                    </button>
+                    <a href="#" class="body-md" style="font-weight: 700;">Watch Video</a>
+                </div>
+            </div>
         </header>
-        <section class="container">
-            <div class="f-row">
-                <div>
-                    <img src="Assets/Images/aHR0cDovL2ltYWdlLmloZWFydC5jb20vaW1hZ2VzL3JvdmkvMTA4MC8wMDA0LzMyNy9NSTAwMDQzMjcxNjAuanBn.webp" alt="">
+
+        <!-- Artist Highlight -->
+        <section id="artist-highlight">
+            <div class="artist-column">
+                <div class="artist-image">
+                    <img src="Assets/Images/aHR0cDovL2ltYWdlLmloZWFydC5jb20vaW1hZ2VzL3JvdmkvMTA4MC8wMDA0LzMyNy9NSTAwMDQzMjcxNjAuanBn.webp" alt="Side profile photo of Brent Fiayaz">
                 </div>
-                <div>
-                    <h2>Brent Faiyaz, So Far Gone</h2>
-                    <p>Faiyaz began uploading his music onto SoundCloud in 2014 and moved from his hometown Columbia, Maryland to Charlotte, North Carolina before ultimately settling in Los Angeles, California to further his music career.  On January 19, 2015, he released his debut single "Allure". On June 1, 2016, Faiyaz released "Invite Me", the lead single from his upcoming debut EP. On September 19, 2016, his 21st birthday, the EP entitled A.M. Paradox was released and received with positive reviews from music critics.  On January 26, 2017, Sonder released their debut EP Into.</p>
-                    <button class="info-button">Learn More</button>
+                <div class="artist-desc">
+                    <h3>Brent Faiyaz, So Far Gone</h3>
+                    <p class="body-md w-400">Faiyaz began uploading his music onto SoundCloud in 2014 and moved from his hometown Columbia, Maryland to Charlotte, North Carolina before ultimately settling in Los Angeles, California to further his music career.  On January 19, 2015, he released his debut single "Allure". On June 1, 2016, Faiyaz released "Invite Me", the lead single from his upcoming debut EP. On September 19, 2016, his 21st birthday, the EP entitled A.M. Paradox was released and received with positive reviews from music critics.  On January 26, 2017, Sonder released their debut EP Into.</p>
+                    <button class="info-button"><span>Learn More</span></button>
                 </div>
             </div>
+  
         </section>
+
+        <!-- New Music Releases -->
         <section id="new-releases">
-            <h2>New Releases</h2>
-            <p>New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
+            <div class="releases-desc body-lg">
+                <h3>New Releases</h3>
+                <p>New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
+            </div>
+            
             <div class="releases-slider">
+                
                 <div class="slider-item">
-                    <div>
-                        <img src="Assets/Images/71RLkNIuZNL._SY355_.jpg" alt="">
-                    </div>
-                    <div>
-                        <h3>Trapsoul</h3>
-                        <p>Bryson Tiller</p>
-                        <p>Bryson Djuan Tiller, is an American singer, songwriter and rapper. Born in Louisville, Kentucky, he started his career in 2011, releasing the debut mixtape titled Killer Instinct Vol.1. </p>
+                    <div class="slider-item-inner">
+                        <div>
+                            <img src="Assets/Images/71RLkNIuZNL._SY355_.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3 class="blue-txt">Trapsoul</h3>
+                            <p class="all-caps green-txt">Bryson Tiller</p>
+                            <p class="body-sm">Bryson Djuan Tiller, is an American singer, songwriter and rapper. Born in Louisville, Kentucky, he started his career in 2011, releasing the debut mixtape titled Killer Instinct Vol.1. </p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="slider-item">
+                    <div class="slider-item-inner">
+                        <div>
+                            <img src="Assets/Images/71RLkNIuZNL._SY355_.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3 class="blue-txt">Trapsoul</h3>
+                            <p class="all-caps green-txt">Bryson Tiller</p>
+                            <p class="body-sm">Bryson Djuan Tiller, is an American singer, songwriter and rapper. Born in Louisville, Kentucky, he started his career in 2011, releasing the debut mixtape titled Killer Instinct Vol.1. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item-inner">
+                        <div>
+                            <img src="Assets/Images/71RLkNIuZNL._SY355_.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3 class="blue-txt">Trapsoul</h3>
+                            <p class="all-caps green-txt">Bryson Tiller</p>
+                            <p class="body-sm">Bryson Djuan Tiller, is an American singer, songwriter and rapper. Born in Louisville, Kentucky, he started his career in 2011, releasing the debut mixtape titled Killer Instinct Vol.1. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item-inner">
+                        <div>
+                            <img src="Assets/Images/71RLkNIuZNL._SY355_.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3 class="blue-txt">Trapsoul</h3>
+                            <p class="all-caps green-txt">Bryson Tiller</p>
+                            <p class="body-sm">Bryson Djuan Tiller, is an American singer, songwriter and rapper. Born in Louisville, Kentucky, he started his career in 2011, releasing the debut mixtape titled Killer Instinct Vol.1. </p>
+                        </div>
+                    </div>
+                </div>            
             </div>
+            <div class="slider-buttons" />
         </section>
+
+        <!-- Google Maps -->
+        <div id="map"></div>
+
+        <!-- Contact Form -->
         <section id="contact">
-            <div>
+            <div class="contact-left">
                 <h2>Get In Touch</h2>
                 <p>New albums every single month, check out the newest & best from Snyder Recording artist, now available on Apple Music & Spotify.</p>
                 <form class="contact-form">
-                    <div>
-                        <label for="first">First Name</label>
-                        <input type="text" name="first" id="fName">
+                    <div class="form-row">
+                        <label for="first">First Name<br>
+                            <input type="text" name="first" id="fName" placeholder="First Name">
+                        </label>
+                        
 
-                        <label for="last">Last Name</label>
-                        <input type="text" name="last" id="lName">
+                        <label for="last">Last Name<br>
+                            <input type="text" name="last" id="lName" placeholder="Last Name">
+                        </label>
+                        
                     </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                    <div class="form-row">
+                        <label for="email">Email<br>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </label>
+                        
 
-                        <label for="reason">Reason for Contacting</label>
-                        <select name="reason" id="reason"></select>
+                        <label for="reason">Reason for Contacting<br>
+                            <div class="reason-option-arrow"></div>
+                            <select name="reason" id="reason" class="invalid-option">
+                                <option selected disabled>Select One</option>
+                                <option value="1">Option 1</option>
+                            </select>
+                        </label>
+                        
                     </div>
 
-                    <label for="message">Message (optional)</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <label for="message">Message (optional)<br>
+                        <div class="message-grabber"></div>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write a brief message..." class="body-sm"></textarea>
+                    </label>
+                    
+                    
+
+                    <button type="button" class="info-button">Submit</button> <!-- should be type submit -->
 
                 </form>
             </div>
             <div class="contact-image">
-                <img src="Assets/Images/harry-swales-0l0KjNoAfAk-unsplash.jpg" alt="">
+                <img src="Assets/Images/harry-swales-0l0KjNoAfAk-unsplash.jpg" alt="Image of man singing into a microphone.">
             </div>
         </section>
+
+        <!-- Footer -->
         <footer id="footer">
             <div class="footer-top">
                 <div class="footer-col">
-                    <img src="Assets/Logos/Logo-White.svg" alt="Synder Recordings">
+                    <img src="Assets/Logos/Logo-White.svg" class="logo" alt="Synder Recordings">
                     <p>8521 W Fairfax Rd<br>Los Angelos, CA</p>
                     <p>990210 <br>(909) 505 4302</p>
                 </div>
                 <div class="footer-col">
-                    <p>EXPLORE</p>
-                    <p>About Us</p>
-                    <p>Our Story</p>
-                    <p>Team</p>
-                    <p>Careers</p>
-                    <p>FAQ</p>
+                    <p class="footer-heading">EXPLORE</p>
+                    <a href="#">About Us</a>
+                    <a href="#">Our Story</a>
+                    <a href="#">Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">FAQ</a>
                 </div>
                 <div class="footer-col">
-                    <p>MUSIC</p>
-                    <p>Missing Out</p>
-                    <p>Trapsoul</p>
-                    <p>Sonder Sons</p>
-                    <p>Paradise Today</p>
-                    <p>Needed</p>
+                    <p class="footer-heading">MUSIC</p>
+                    <a href="#">Missing Out</a>
+                    <a href="#">Trapsoul</a>
+                    <a href="#">Sonder Sons</a>
+                    <a href="#">Paradise Today</a>
+                    <a href="#">Needed</a>
                 </div>
                 <div class="footer-col">
-                    <p>ARTISTS</p>
-                    <p>Brent Faiyaz</p>
-                    <p>Drake</p>
-                    <p>Bryson Ford</p>
-                    <p>Young Ford</p>
-                    <p>Roy Fresno</p>
+                    <p class="footer-heading">ARTISTS</p>
+                    <a href="#">Brent Faiyaz</a>
+                    <a href="#">Drake</a>
+                    <a href="#">Bryson Ford</a>
+                    <a href="#">Young Ford</a>
+                    <a href="#">Roy Fresno</a>
                 </div>
                 <div class="footer-col">
-                    <p>RECORDS</p>
-                    <p>What a Time</p>
-                    <p>Coming Home</p>
-                    <p>Always First</p>
-                    <p>So Far Gone</p>
-                    <p>Big Bluez</p>
+                    <p class="footer-heading">RECORDS</p>
+                    <a href="#">What a Time</a>
+                    <a href="#">Coming Home</a>
+                    <a href="#">Always First</a>
+                    <a href="#">So Far Gone</a>
+                    <a href="#">Big Bluez</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div>
-                    <p>Privacy Policy</p>
-                    <p>Terms & Conditions</p>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
                 </div>
                 <div>
-                    <img src="Assets/Icons/Social Icons/007-instagram 1.svg" alt="Instagram">
-                    <img src="Assets/Icons/Social Icons/009-youtube 1.svg" alt="Youtube">
-                    <img src="Assets/Icons/Social Icons/004-twitter 1.svg" alt="Twitter">
-                    <img src="Assets/Icons/Social Icons/002-facebook 1.svg" alt="Facebook">
+                    <a href="#"><img src="Assets/Icons/Social Icons/007-instagram 1.svg" alt="Instagram"></a>
+                    <a href="#"><img src="Assets/Icons/Social Icons/009-youtube 1.svg" alt="Youtube"></a>
+                    <a href="#"><img src="Assets/Icons/Social Icons/004-twitter 1.svg" alt="Twitter"></a>
+                    <a href="#"><img src="Assets/Icons/Social Icons/002-facebook 1.svg" alt="Facebook"></a>
                 </div>
 
             </div>
         </footer>
 
+        <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="javascript" src="main.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyDbh3yODKW3_Hq6yRzI1rlt4S87iRESKec", v: "weekly"});</script>
     </body> 
 
 </html>
